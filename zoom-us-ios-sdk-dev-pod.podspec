@@ -23,6 +23,7 @@ Pod::Spec.new do |spec|
   spec.frameworks = "Foundation", "UIKit", "VideoToolbox", "CoreBluetooth", "ReplayKit", "CoreMotion"
 
   spec.default_subspec = 'Core'
+  spec.requires_arc = true
 
   spec.subspec 'Core' do |subspec|
     subspec.ios.source_files           = "MobileRTC.framework/Headers/**/*.{h,m}"
