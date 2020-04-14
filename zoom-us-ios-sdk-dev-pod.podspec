@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZoomSDK"
   spec.version      = "4.6.15805.0403"
-  spec.summary      = "Original framework for Zoom.us service x86_x64"
+  spec.summary      = "Original framework for Zoom.us service"
   spec.homepage     = "https://github.com/zoom/zoom-sdk-ios"
   spec.license      = "MIT"
   spec.author             = { "Mokriya" => "info@mokriya.com" }
@@ -17,19 +17,19 @@ Pod::Spec.new do |spec|
   spec.swift_version              = "5.0"
   spec.ios.deployment_target      = "10.0"
 
-  spec.source       = { :git => "https://github.com/mokriya-org/zoom-us-ios-sdk-dev-pod.git", :tag => "v#{spec.version}" }
+  spec.source       = { :git => "https://github.com/mokriya-org/zoom-us-ios-sdk-pod.git", :tag => "v#{spec.version}" }
 
-  # spec.libraries = "z", "c++", "sqlite3"
-  # spec.frameworks = "Foundation", "UIKit", "VideoToolbox", "CoreBluetooth", "ReplayKit", "CoreMotion"
-  spec.source_files           = "MobileRTC.framework/Headers/**/*.{h,m}"
-  spec.public_header_files    = "MobileRTC.framework/Headers/**/*.{h,m}"
+  spec.libraries = "z", "c++", "sqlite3"
+  spec.frameworks = "Foundation", "UIKit", "VideoToolbox", "CoreBluetooth", "ReplayKit", "CoreMotion"
+
   spec.default_subspec = 'Core'
 
   spec.subspec 'Core' do |subspec|
+    subspec.ios.source_files           = "MobileRTC.framework/Headers/**/*.{h,m}"
+    subspec.ios.public_header_files    = "MobileRTC.framework/Headers/**/*.{h,m}"
+    subspec.ios.vendored_frameworks    = "MobileRTC.framework"
 
-    subspec.vendored_frameworks    = "MobileRTC.framework"
-
-    subspec.resource = "MobileRTCResources.bundle"
+    subspec.ios.resource = "MobileRTCResources.bundle"
   end
 
   # Uncomment when this library will be support Swift 5 or higher
