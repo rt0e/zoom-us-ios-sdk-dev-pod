@@ -21,12 +21,12 @@ Pod::Spec.new do |spec|
 
   # spec.libraries = "z", "c++", "sqlite3"
   # spec.frameworks = "Foundation", "UIKit", "VideoToolbox", "CoreBluetooth", "ReplayKit", "CoreMotion"
-
+  spec.source_files           = "MobileRTC.framework/Headers/**/*.{h,m}"
+  spec.public_header_files    = "MobileRTC.framework/Headers/**/*.{h,m}"
   spec.default_subspec = 'Core'
 
   spec.subspec 'Core' do |subspec|
-    subspec.source_files           = "MobileRTC.framework/Headers/**/*.{h,m}"
-    subspec.public_header_files    = "MobileRTC.framework/Headers/**/*.{h,m}"
+
     subspec.vendored_frameworks    = "MobileRTC.framework"
 
     subspec.resource = "MobileRTCResources.bundle"
