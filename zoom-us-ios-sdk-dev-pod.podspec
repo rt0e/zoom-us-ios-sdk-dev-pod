@@ -5,11 +5,12 @@
 #  To learn more about Podspec attributes see https://docs.cocoapods.org/specification.html
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
+# Zoom iOS SDK w/Simulator libraries (x86_64)
 
 Pod::Spec.new do |spec|
-  spec.name         = "ZoomSDK"
+  spec.name         = "ZoomDEVSDK"
   spec.version      = "4.6.15805.0403"
-  spec.summary      = "Original framework for Zoom.us service"
+  spec.summary      = "Original framework for Zoom.us iOS SDK with x86_64 for simulator"
   spec.homepage     = "https://github.com/zoom/zoom-sdk-ios"
   spec.license      = "MIT"
   spec.author             = { "Mokriya" => "info@mokriya.com" }
@@ -19,8 +20,8 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/mokriya-org/zoom-us-ios-sdk-pod.git", :tag => "v#{spec.version}" }
 
-  spec.libraries = "z", "c++", "sqlite3"
-  spec.frameworks = "Foundation", "UIKit", "VideoToolbox", "CoreBluetooth", "ReplayKit", "CoreMotion"
+  # spec.libraries = "z", "c++", "sqlite3"
+  # spec.frameworks = "Foundation", "UIKit", "VideoToolbox", "CoreBluetooth", "ReplayKit", "CoreMotion"
 
   spec.default_subspec = 'Core'
   spec.requires_arc = true
