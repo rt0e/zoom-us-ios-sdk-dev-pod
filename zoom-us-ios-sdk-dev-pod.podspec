@@ -23,16 +23,13 @@ Pod::Spec.new do |spec|
   # spec.libraries = "z", "c++", "sqlite3"
   # spec.frameworks = "Foundation", "UIKit", "VideoToolbox", "CoreBluetooth", "ReplayKit", "CoreMotion"
 
-  spec.default_subspec = 'Core'
-  spec.requires_arc = true
+  # spec.default_subspec = 'Core'
+  # spec.requires_arc = true
 
-  spec.subspec 'Core' do |subspec|
-    subspec.ios.source_files           = "MobileRTC.framework/Headers/**/*.{h,m}"
-    subspec.ios.public_header_files    = "MobileRTC.framework/Headers/**/*.{h,m}"
-    subspec.ios.vendored_frameworks    = "MobileRTC.framework"
+  spec.ios.source_files           = "MobileRTC.framework/Headers/**/*.{h,m}"
+  spec.ios.vendored_frameworks    = "MobileRTC.framework"
+  spec.ios.resource = "MobileRTCResources.bundle"
 
-    subspec.ios.resource = "MobileRTCResources.bundle"
-  end
 
   # Uncomment when this library will be support Swift 5 or higher
   # spec.subspec 'ShareScreen' do |subspec|
