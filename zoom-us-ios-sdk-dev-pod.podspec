@@ -24,11 +24,12 @@ Pod::Spec.new do |spec|
   # spec.frameworks = "Foundation", "UIKit", "VideoToolbox", "CoreBluetooth", "ReplayKit", "CoreMotion"
 
   # spec.default_subspec = 'Core'
-  # spec.requires_arc = true
+  spec.requires_arc = true
 
-  spec.ios.source_files           = "MobileRTC.framework/Headers/**/*.{h,m}"
-  spec.ios.vendored_frameworks    = "MobileRTC.framework"
-  spec.ios.resource = "MobileRTCResources.bundle"
+  spec.source_files           = "MobileRTC.framework/Headers/**/*.{h,m}"
+  spec.public_header_files           = "MobileRTC.framework/Headers/**/*.{h,m}"
+  spec.vendored_frameworks    = "MobileRTC.framework"
+  spec.resource = "MobileRTCResources.bundle"
 
 
   # Uncomment when this library will be support Swift 5 or higher
