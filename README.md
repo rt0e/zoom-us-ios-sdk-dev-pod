@@ -10,5 +10,5 @@ Use this repo with our Zoom.US Bridge for React Native [react-native-zoom-us-bri
 
 
 ## Installation
-
+Add this to your Podfile
 `pod 'ZoomSDK', :git => 'https://github.com/mokriya-org/zoom-us-ios-sdk-dev-pod.git'`
