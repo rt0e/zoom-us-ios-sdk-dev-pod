@@ -8,7 +8,7 @@
 # Zoom iOS SDK w/Simulator libraries (x86_64)
 
 Pod::Spec.new do |spec|
-  spec.name         = "ZoomSDK"
+  spec.name         = "ZoomSDKDev"
   spec.version      = "5.0.24433.0616"
   spec.summary      = "Original framework for Zoom.us iOS SDK with x86_64 for simulator"
   spec.homepage     = "https://github.com/zoom/zoom-sdk-ios"
